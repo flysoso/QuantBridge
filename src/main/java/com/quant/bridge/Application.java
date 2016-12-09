@@ -34,7 +34,6 @@ public class Application {
 
 
     public static void main(String[] args) {
-        logger.info("[启动服务]");
         int port = args.length > 0 ? Integer.parseInt(args[0]) : 10086;
         SpringApplication context = new SpringApplication(Application.class);
         context.addListeners(new ApplicationSocketStartup(port));
